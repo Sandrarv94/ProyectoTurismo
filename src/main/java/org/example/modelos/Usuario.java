@@ -45,6 +45,7 @@ public class Usuario {
     public void setNombres(String nombres) {
         try{
             this.validacion.validarNombre(nombres);
+            this.nombres =nombres;
         } catch(Exception error){
             System.out.println(error.getMessage());
         }
@@ -56,7 +57,12 @@ public class Usuario {
     }
 
     public void setCorreo(String correo) {
-        this.correo = correo;
+        try{
+            this.validacion.validarCorreo(correo);
+            this.correo=correo;
+        } catch(Exception error){
+            System.out.println(error.getMessage());
+        }
     }
 
     public Integer getUbicacion() {
@@ -64,6 +70,12 @@ public class Usuario {
     }
 
     public void setUbicacion(Integer ubicacion) {
-        this.ubicacion = ubicacion;
+
+        try{
+            this.validacion.validarUbicacion(ubicacion);
+            this.ubicacion = ubicacion;
+        } catch(Exception error){
+            System.out.println(error.getMessage());
+        }
     }
 }
