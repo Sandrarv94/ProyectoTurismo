@@ -14,7 +14,7 @@ public class UsuarioValidacion {
 
     //metodos ordinarios para validar datos
     public Boolean validarNombre(String nombres)throws Exception{
-        String  expresionRegular = "^[a-zA-Z]+$";
+        String  expresionRegular = "^[a-zA-Z ñ]+$";
         if(!util.buscarCoincidencia(expresionRegular, nombres)){
             throw new Exception("Señor usuario su nombre solo puede tener letras");
         } else if(nombres.length()<10){

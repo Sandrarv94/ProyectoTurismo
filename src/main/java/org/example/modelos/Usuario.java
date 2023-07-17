@@ -78,4 +78,16 @@ public class Usuario {
             System.out.println(error.getMessage());
         }
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", documento='" + documento + '\'' +
+                ", nombres='" + nombres + '\'' +
+                ", correo='" + correo + '\'' +
+                ", ubicacion=" + ubicacion +
+                ", validacion=" + validacion +
+                '}';
+    }
 }
