@@ -16,6 +16,8 @@ public class Main {
         usuario.setNombres(teclado.nextLine());
         System.out.print("Ingresa tu correo electrónico: ");
         usuario.setCorreo(teclado.nextLine());
+        System.out.println("Ingresa el numero de ubicación de tu zona: ");
+        usuario.setUbicacion(teclado.nextInt());
         System.out.println("..............................");
         System.out.println(usuario);
 

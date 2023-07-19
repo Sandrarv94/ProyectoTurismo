@@ -1,5 +1,8 @@
 package org.example.modelos;
 
+import org.example.validaciones.OfertaValidacion;
+import org.example.validaciones.UsuarioValidacion;
+
 import java.time.LocalDate;
 
 public class Oferta {
@@ -11,7 +14,7 @@ public class Oferta {
     private LocalDate fechaFin;
     private Double costoPersona;
     private Integer idLocal;
-
+    private OfertaValidacion validacion = new OfertaValidacion();
     public Oferta() {
     }
 
