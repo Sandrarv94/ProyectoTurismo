@@ -10,7 +10,11 @@ public enum Mensajes {
     NIT_SOLO_NUMEROS("El nit solo debe contener números"),
     NIT_CANTIDAD("El nit debe contener 10 números"),
     TITULO_SOLO_LETRAS("El titulo de la oferta solo puede contener letras"),
-    TITULO_CANTIDAD_LETRAS("El titulo de la oferta no puede sobrepasar los 20 caracteres");
+    TITULO_CANTIDAD_LETRAS("El titulo de la oferta no puede sobrepasar los 20 caracteres"),
+    ERROR_FORMATO_FECHA("El formato de la fecha debe ser dd/MM/yyyy"),
+    ERROR_FECHA("Error: La fecha de inicio no puede ser mayor a la fecha final."),
+    ERROR_COSTO("El costo por cada persona no puede ser un valor negativo. ");
+
     private String mensaje;
 
     Mensajes(String mensaje) {
