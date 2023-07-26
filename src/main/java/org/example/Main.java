@@ -17,23 +17,25 @@ public class Main {
         Reserva reserva = new Reserva();
 
         System.out.println("****Bienvenido****");
-        System.out.println("1: Recogiendo datos del usuario: ");
+        System.out.println("1: Recogiendo datos del usuario");
+        System.out.print("Ingresa tu identificación: ");
+        usuario.setDocumento(teclado.nextLine());
         System.out.print("Ingresa tu nombre y apellido: ");
         usuario.setNombres(teclado.nextLine());
         System.out.print("Ingresa tu correo electrónico: ");
         usuario.setCorreo(teclado.nextLine());
-        System.out.println("Ingresa el numero de ubicación de tu zona: ");
-        usuario.setUbicacion(teclado.nextInt());
+        //System.out.print("Ingresa el numero de ubicación de tu zona: ");
+        //usuario.setUbicacion(teclado.nextInt());
         System.out.println("..............................");
         System.out.println(usuario);
-        System.out.println("2: Recogiendo datos del local: ");
+        System.out.println("2: Recogiendo datos del local");
         System.out.print("Ingresa el NIT de la empresa: ");
         local.setNit(teclado.nextLine());
-        System.out.println("Ingresa el nombre de la empresa: ");
+        System.out.print("Ingresa el nombre de la empresa: ");
         local.setNombre(teclado.nextLine());
-        System.out.println("Ingresa el numero de ubicación de tu zona: ");
-        local.setUbicacion(teclado.nextInt());
-        System.out.println("Ingresa la descripción del local: ");
+        //System.out.print("Ingresa el numero de ubicación de tu zona: ");
+        //local.setUbicacion(teclado.nextInt());
+        System.out.print("Ingresa la descripción del local: ");
         local.setDescripcion(teclado.nextLine());
         System.out.println("..............................");
         System.out.println(local);
@@ -57,9 +59,12 @@ public class Main {
         reserva.setIdUsuario(teclado.nextInt());
         System.out.println("Ingresa el id de la oferta: ");
         reserva.setIdOferta(teclado.nextInt());
-        System.out.println("Ingresa el valor total del costo: ");
-        reserva.setCostoTotal(teclado.nextDouble());
+        System.out.println("Ingresa el numero de personas para la reserva: ");
+        reserva.setNumeroPersonasReserva(teclado.nextInt());
         System.out.println("Ingresa la fecha de la reserva: ");
         reserva.setFechaReseva(teclado.next());
+        System.out.println("Ingresa el valor total de la reserva: ");
+        reserva.setCostoTotal(teclado.nextDouble());
+        System.out.println(reserva);
     }
 }

@@ -14,4 +14,13 @@ public class ReservaValidacion {
             return true;
         }
     }
+
+    public Boolean validarNumeroPersonas(Integer numeroPersonasReserva) throws Exception{
+
+        if(numeroPersonasReserva>4){
+            throw new Exception(Mensajes.CANTIDAD_PERSONAS.getMensaje());
+        } else{
+            return  true;
+        }
+    }
 }

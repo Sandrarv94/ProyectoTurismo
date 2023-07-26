@@ -13,7 +13,8 @@ public enum Mensajes {
     TITULO_CANTIDAD_LETRAS("El titulo de la oferta no puede sobrepasar los 20 caracteres"),
     ERROR_FORMATO_FECHA("El formato de la fecha debe ser dd/MM/yyyy"),
     ERROR_FECHA("Error: La fecha de inicio no puede ser mayor a la fecha final."),
-    ERROR_COSTO("El costo por cada persona no puede ser un valor negativo. ");
+    ERROR_COSTO("El costo por cada persona no puede ser un valor negativo. "),
+    CANTIDAD_PERSONAS("La cantidad máxima para una reserva es de 4 personas. ");
 
     private String mensaje;
 

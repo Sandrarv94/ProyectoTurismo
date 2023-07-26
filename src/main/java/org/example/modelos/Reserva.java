@@ -12,17 +12,35 @@ public class Reserva {
     private Integer idOferta;
     private Double costoTotal;
     private LocalDate fechaReserva;
+
+    private Integer numeroPersonasReserva;
     private ReservaValidacion validacion = new ReservaValidacion();
+
+    public Integer getNumeroPersonasReserva() {
+        return numeroPersonasReserva;
+    }
+
+    public void setNumeroPersonasReserva(Integer numeroPersonasReserva) {
+        try{
+            this.validacion.validarNumeroPersonas(numeroPersonasReserva);
+            this.numeroPersonasReserva = numeroPersonasReserva;
+        } catch (Exception error){
+            System.out.println(error.getMessage());
+        }
+    }
+
+
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     public Reserva() {
     }
 
-    public Reserva(Integer id, Integer idUsuario, Integer idOferta, Double costoTotal, LocalDate fechaReseva) {
+    public Reserva(Integer id, Integer idUsuario, Integer idOferta, Double costoTotal, LocalDate fechaReseva, Integer numeroPersonasReserva) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.idOferta = idOferta;
         this.costoTotal = costoTotal;
         this.fechaReserva = fechaReseva;
+        this.numeroPersonasReserva = numeroPersonasReserva;
     }
 
     public Integer getId() {

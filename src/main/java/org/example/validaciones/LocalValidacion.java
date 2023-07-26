@@ -23,10 +23,7 @@ public class LocalValidacion {
     }
 
     public Boolean validarNombre(String nombre)throws Exception{
-        String  expresionRegular = "^[a-zA-Z ñ]+$";
-        if(!util.buscarCoincidencia(expresionRegular, nombre)){
-            throw new Exception(Mensajes.NOMBRE_SOLO_LETRAS.getMensaje());
-        } else if(nombre.length()>30){
+        if(nombre.length()>30){
             throw new Exception(Mensajes.NOMBRE_MUY_LARGO.getMensaje());
         } else{
             return true;
