@@ -16,7 +16,7 @@ public class Main {
         Oferta oferta =new Oferta();
         Reserva reserva = new Reserva();
 
-        System.out.println("****Bienvenido****");
+        /*System.out.println("****Bienvenido****");
         System.out.println("1: Recogiendo datos del usuario");
         System.out.print("Ingresa tu identificación: ");
         usuario.setDocumento(teclado.nextLine());
@@ -43,12 +43,12 @@ public class Main {
         System.out.println("Ingresa el titulo de la oferta: ");
         oferta.setTitulo(teclado.nextLine());
         System.out.println("Ingresa la descripción de la oferta: ");
-        oferta.setDescripcion(teclado.nextLine());
+        oferta.setDescripcion(teclado.nextLine());*/
         System.out.println("Ingresa la fecha de inicio de la oferta (el formato requerido es dd/MM/yyyy): ");
         oferta.setFechaInicio(teclado.next());
         System.out.println("Ingresa la fecha final de la oferta: ");
         oferta.setFechaFin(teclado.next());
-        System.out.println("Ingresa el costo por persona: ");
+        /*System.out.println("Ingresa el costo por persona: ");
         oferta.setCostoPersona(teclado.nextDouble());
         System.out.println("Ingresa el id del Local: ");
         oferta.setIdLocal(teclado.nextInt());
@@ -65,6 +65,6 @@ public class Main {
         reserva.setFechaReseva(teclado.next());
         System.out.println("Ingresa el valor total de la reserva: ");
         reserva.setCostoTotal(teclado.nextDouble());
-        System.out.println(reserva);
+        System.out.println(reserva);*/
     }
 }

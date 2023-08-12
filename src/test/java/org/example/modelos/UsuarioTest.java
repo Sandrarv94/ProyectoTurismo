@@ -28,6 +28,35 @@ class UsuarioTest {
         usuario.setNombres(nombreInvalido);
         Assertions.assertNotEquals(nombreInvalido, usuario.getNombres());
     }
+
+    @Test
+    public void setCorrectoCorreo(){
+        String correoValido = "sandra@gmail.com";
+        this.usuario.setCorreo(correoValido);
+        Assertions.assertEquals(correoValido, usuario.getCorreo());
+    }
+
+    @Test
+    public void setIncorrectoCorreo(){
+
+        String correoInvalido="sandrariosv.com";
+        usuario.setCorreo(correoInvalido);
+        Assertions.assertNotEquals(correoInvalido, usuario.getCorreo());
+    }
+
+    @Test
+    public void setCorrectoUbicacion(){
+        Integer ubicacionValida=4;
+        usuario.setUbicacion(ubicacionValida);
+        Assertions.assertEquals(ubicacionValida,usuario.getUbicacion());
+    }
+
+    @Test
+    public void setIncorrectoUbicacion(){
+        Integer ubicacionInvalida=5;
+        usuario.setUbicacion(ubicacionInvalida);
+        Assertions.assertNotEquals(ubicacionInvalida,usuario.getUbicacion());
+    }
 }
 
 
