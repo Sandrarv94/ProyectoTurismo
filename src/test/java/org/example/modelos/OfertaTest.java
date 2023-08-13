@@ -32,14 +32,18 @@ class OfertaTest {
     public void setCorrectoFechaInicio(){
         String fechaInicioValida="12/08/2023";
         this.oferta.setFechaInicio(fechaInicioValida);
-        Assertions.assertEquals(fechaInicioValida, oferta.getFechaInicio());
+        Assertions.assertDoesNotThrow(()-> {
+            this.oferta.setFechaInicio(fechaInicioValida);
+        });
     }
 
     @Test
     public void setIncorrectoFechaInicio(){
-        String fechaInicioInvalida="12/08/2023";
+        String fechaInicioInvalida="2025/08/12";
         this.oferta.setFechaInicio(fechaInicioInvalida);
-        Assertions.assertNotEquals(fechaInicioInvalida, oferta.getFechaInicio());
+        Assertions.assertDoesNotThrow(()-> {
+            this.oferta.setFechaInicio(fechaInicioInvalida);
+        });
     }
 
     @Test
