@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner teclado = new Scanner(System.in);
+        /*Scanner teclado = new Scanner(System.in);
         Usuario usuario =new Usuario();
         Local local = new Local();
         Oferta oferta =new Oferta();
-        Reserva reserva = new Reserva();
+        Reserva reserva = new Reserva();*/
 
         /*System.out.println("****Bienvenido****");
         System.out.println("1: Recogiendo datos del usuario");
@@ -44,10 +44,10 @@ public class Main {
         oferta.setTitulo(teclado.nextLine());
         System.out.println("Ingresa la descripción de la oferta: ");
         oferta.setDescripcion(teclado.nextLine());*/
-        System.out.println("Ingresa la fecha de inicio de la oferta (el formato requerido es dd/MM/yyyy): ");
+       /* System.out.println("Ingresa la fecha de inicio de la oferta (el formato requerido es dd/MM/yyyy): ");
         oferta.setFechaInicio(teclado.next());
         System.out.println("Ingresa la fecha final de la oferta: ");
-        oferta.setFechaFin(teclado.next());
+        oferta.setFechaFin(teclado.next());*/
         /*System.out.println("Ingresa el costo por persona: ");
         oferta.setCostoPersona(teclado.nextDouble());
         System.out.println("Ingresa el id del Local: ");

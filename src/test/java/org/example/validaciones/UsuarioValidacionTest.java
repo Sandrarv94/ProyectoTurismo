@@ -30,4 +30,27 @@ class UsuarioValidacionTest {
         Assertions.assertEquals(Mensajes.NOMBRE_SOLO_LETRAS.getMensaje(), exception.getMessage());
     }
 
+    @Test
+    public void validarCorreoCorrecto(){
+        String correoValido = "sandra@gmail.com";
+        Assertions.assertDoesNotThrow(()-> usuarioValidacion.validarCorreo(correoValido));
+    }
+
+    @Test
+    public void validarCorreoIncorrecto(){
+        String correoInvalido = "sandramailcom";
+        Assertions.assertDoesNotThrow(()->usuarioValidacion.validarNombre(correoInvalido));
+    }
+
+    @Test
+    public void validarUbicacionCorrecta(){
+        Integer ubicacionValida = 4;
+        Assertions.assertDoesNotThrow(()->usuarioValidacion.validarUbicacion(ubicacionValida));
+    }
+
+    @Test
+    public void validarUbicacionIncorrecta(){
+        Integer ubicacionValida = 6;
+        Exception exception = Assertions.assertThrows(Exception.class, ()->usuarioValidacion.validarUbicacion(ubicacionValida));
+    }
 }

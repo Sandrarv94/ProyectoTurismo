@@ -11,7 +11,12 @@ class UsuarioTest {
 
     @BeforeEach
     public void configuracionInicial(){
-        this.usuario= new Usuario();
+        this.usuario= new Usuario() {
+            @Override
+            public Double calcularAnualidad() {
+                return null;
+            }
+        };
     }
 
     @Test
