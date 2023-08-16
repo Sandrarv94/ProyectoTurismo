@@ -61,4 +61,7 @@ class OfertaTest {
         Assertions.assertNotEquals(costoPersonaInvalido, oferta.getCostoPersona());
 
     }
+
+
+
 }
